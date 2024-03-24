@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+
+<ul id="leftchapters">
+    {% for cat in cats %}
+        {% if cat.id == cat_selected %}
+            <li class="selected">{{cat.name}}</li>
+        {% else %}
+            <li><a href="{% url 'category' cat.id %}">{{cat.name}}</a></li>
+        {% endif %}
+    {% endfor %}
+
+    <li class="share">
+    <p >Наш канал</p>
+    <a class="share-yt" href="..." target="_blank" rel="nofollow"></a>
+    </li>
+</ul>
+
+</body>
+</html>
